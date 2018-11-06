@@ -1,0 +1,130 @@
+.details {
+  width: 900px;
+  min-height: calc(100vh - 75px);
+  @include flexSetUp(space-around, center, column);
+  margin: auto;
+  background: white;
+  padding-top: 15px;
+  font-size: 20px;
+
+  input {
+    margin-top: 4px;
+    width: 80%;
+  }
+
+  .title {
+    @include flexSetUp(center, center);
+    font-size: 30px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+
+    h1 {
+      margin: 0 13px;
+    }
+  }
+
+  .img-container {
+    height: 350px;
+    margin-bottom: 15px;
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+
+  .thumbnails {
+    @include flexSetUp();
+    flex-wrap: wrap;
+    .thumbnail {
+      width: 120px;
+      height: 120px;
+      margin: 0 5px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .text {
+    width: 80%;
+    margin-bottom: 25px;
+    p {
+      text-indent: 35px;
+      max-width: 100%;
+    }
+    textarea {
+      width: 100%;
+      resize: none;
+      height: 100px;
+      font-family: $main-font;
+      font-size: 15px;
+    }
+  }
+
+  .information {
+    @include flexSetUp();
+    width: 80%;
+
+    .column {
+
+      width: 50%;
+
+      h4 {
+        width: auto;
+        margin: 0 auto;
+        margin-bottom: 7px;
+        text-transform: capitalize;
+        display: flex;
+        flex-direction: column;
+      }
+
+      span {
+        font-weight: bolder;
+        margin-right: 6px;
+      }
+    }
+
+  }
+
+  .favorite {
+    padding: 15px;
+    font-weight: bold;
+    background: $lime-green;
+    border-radius: 5px;
+    margin: 20px;
+    transition: .1s linear box-shadow, .4s ease background-color;
+    box-shadow: 2px 2px 2px rgba(75, 75, 75, 0.63);
+    cursor: pointer;
+  }
+
+  .favorite:hover{
+    cursor: pointer;
+    background-color: $lime-green-hover;
+  }
+  .favorite:active{
+    box-shadow: 1px 1px 0px rgba(75, 75, 75, 0.63);
+  }
+
+  .unfavorite {
+    padding: 15px;
+    font-weight: bold;
+    background: $red;
+    border-radius: 5px;
+    margin: 20px;
+    transition: .1s linear box-shadow, .4s ease background-color;
+    box-shadow: 2px 2px 2px rgba(75, 75, 75, 0.63);
+    cursor: pointer;
+  }
+
+  .unfavorite:hover{
+    cursor: pointer;
+    background-color: $red-hover;
+  }
+  .unfavorite:active{
+    box-shadow: 1px 1px 0px rgba(75, 75, 75, 0.63);
+  }
+}

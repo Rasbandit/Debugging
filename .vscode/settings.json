@@ -1,0 +1,19 @@
+{
+  "eslint.enable": false,
+  "editor.formatOnSave": false,
+  "editor.fontLigatures": false,
+  "html-css-class-completion.enableEmmetSupport": false,
+  "emmet.triggerExpansionOnTab": false,
+  "emmet.showExpandedAbbreviation": "never",
+  "html.autoClosingTags": false,
+  "editor.parameterHints": false,
+  "editor.tabCompletion": false,
+  "emmet.showSuggestionsAsSnippets": false,
+  "editor.quickSuggestions": {
+    "other": false,
+    "comments": false,
+    "strings": false
+  },
+  "html.suggest.html5": false,
+  "files.autoSave": "afterDelay"
+}

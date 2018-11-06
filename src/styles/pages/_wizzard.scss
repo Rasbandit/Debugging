@@ -1,0 +1,218 @@
+.wizzard {
+  width: 900px;
+  min-height: calc(100vh - 75px);
+  @include flexSetUp(flex-start, center, column);
+  margin: auto;
+  background: white;
+  padding-top: 15px;
+
+  .top {
+    width: 95%;
+    @include flexSetUp(space-between, center);
+
+    h2 {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .button {
+      padding: 10px;
+      font-weight: bolder;
+      background: $red;
+      border-radius: 5px;
+      transition: .1s linear box-shadow, .4s ease background-color;
+      box-shadow: 2px 2px 2px rgba(75, 75, 75, 0.63);
+      cursor: pointer;
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+  .button:hover{
+    cursor: pointer;
+    background-color: $red-hover;
+  }
+  .button:active{
+    box-shadow: 1px 1px 0px rgba(75, 75, 75, 0.63);
+  }
+
+  .step {
+    width: 80%;
+    @include flexSetUp(flex-start, center, column);
+
+    h1 {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .step-gauge {
+      width: 80%;
+      @include flexSetUp(space-between)
+    }
+  }
+
+  .inputs {
+    width: 100%;
+    @include flexSetUp(flex-start, center, column);
+    margin-top: 25px;
+
+    .img-container {
+      @include flexSetUp(center, center);
+      height: 350px;
+      width: 80%;
+      background: rgb(209, 209, 209);
+      margin-bottom: 15px;
+      box-sizing: border-box;
+      border-color: $medium-green;
+      border-width: 1px;
+      border-style: solid;
+      overflow: hidden;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .thumbnails {
+    @include flexSetUp();
+    flex-wrap: wrap;
+    .thumbnail {
+      @include flexSetUp(center, center);
+      width: 120px;
+      height: 120px;
+      margin: 0 5px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+      }
+    }
+  }
+
+    .middle {
+      width: 80%;
+      @include flexSetUp(space-between, center);
+      flex-wrap: wrap;
+      
+      section {
+        width: 40%;
+        label {
+          font-size: 18px;
+          font-weight: bold;
+          margin-left: 30px;
+          margin-bottom: 3px;
+        }
+  
+        input {
+          width: 100%;
+          box-sizing: border-box;
+          border-color: $medium-green;
+          border-width: 1px;
+          border-style: solid;
+          font-size: 19px;
+          padding-left: 5px;
+        }
+      }
+    }
+
+    section {
+      width: 80%;
+      @include flexSetUp(flex-start, flex-start, column);
+      margin-bottom: 20px;
+      
+      label {
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 30px;
+        margin-bottom: 3px;
+      }
+
+      input {
+        width: 100%;
+        box-sizing: border-box;
+        border-color: $medium-green;
+        border-width: 1px;
+        border-style: solid;
+        font-size: 19px;
+        padding-left: 5px;
+      }
+
+      textarea {
+        resize: none;
+        width: 100%;
+        height: 200px;
+        box-sizing: border-box;
+        border-color: $medium-green;
+        border-width: 1px;
+        border-style: solid;
+        font-size: 19px;
+        font-family: $main-font;
+        padding-left: 5px;
+      }
+      .img-inputs {
+        width: 100%;
+        @include flexSetUp(space-between);
+        margin-bottom: 15px;
+        
+        .clear-button {
+          font-size: 15px;
+          color: white;
+          background: $dark-green;
+          padding: 6px;
+          border-radius: 5px;
+          box-shadow: 2px 2px 2px rgba(75, 75, 75, 0.63);
+          margin-left: 8px;
+          cursor: pointer;
+          transition: .1s linear box-shadow, .4s ease background-color;
+          -webkit-user-select: none;
+          text-decoration: none;
+        }
+        .clear-button:hover {
+          background: $dark-green-hover;
+        }
+        .clear-button:active{
+          box-shadow: 1px 1px 2px rgba(75, 75, 75, 0.63);
+        }
+      }
+    }
+
+    .buttons {
+      width: 80%;
+      @include flexSetUp( space-around);
+
+      .next-button {
+         @include flexSetUp(center, center);
+          font-size: 20px;
+          color: white;
+          background: $dark-green;
+          padding: 10px;
+          border-radius: 5px;
+          box-shadow: 2px 2px 2px rgba(75, 75, 75, 0.63);
+          margin-left: 8px;
+          cursor: pointer;
+          transition: .1s linear box-shadow, .4s ease background-color;
+          -webkit-user-select: none;
+          text-decoration: none;
+          margin-bottom: 25px;
+      }
+      .next-button:hover {
+        background: $dark-green-hover;
+      }
+      .next-button:active{
+        box-shadow: 1px 1px 2px rgba(75, 75, 75, 0.63);
+      }
+      .complete {
+        color: black;
+        background: $lime-green;
+      }
+      .complete:hover {
+        background: $lime-green-hover;
+      }
+      .complete:active {
+        box-shadow: 1px 1px 2px rgba(75, 75, 75, 0.63); 
+      }
+    }
+  }
+}
