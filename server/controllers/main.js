@@ -104,7 +104,6 @@ module.exports = {
       if (house[0]) {
         DB.getImages(req.params.id).then(images => {
           house[0].image = images;
-          res.send(house[0]);
         });
       } else {
         res.status(404).send();
