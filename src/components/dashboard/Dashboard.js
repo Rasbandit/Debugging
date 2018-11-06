@@ -22,9 +22,6 @@ class Dashboard extends React.Component {
   }
 
   componentDidMount() {
-    if (!this.props.user.id && process.env.NODE_ENV !== 'development') {
-      this.props.history.push('/');
-    }
     this.props.getHouses();
     this.props.getFavorites();
     this.props.getListed();
@@ -82,7 +79,7 @@ class Dashboard extends React.Component {
       .map(house => (
         <HouseCardDashboard
           house={house}
-          favoriteHouses={this.state.favoriteHouses}
+          favoriteHouse={this.state.favoriteHouses}
           key={house.id}
           favorite={this.favorite}
           unfavorite={this.unfavorite}

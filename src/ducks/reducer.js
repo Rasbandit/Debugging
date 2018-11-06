@@ -22,7 +22,7 @@ export default function reducer(state = initalState, action) {
     case `${GET_LISTED}_FULFILLED`:
       return Object.assign({}, state, { listedHouses: action.payload });
     case GET_USER:
-      return Object.assign({}, state, { user: action.payload });
+      return Object.assign(state, { user: action.payload });
     case LOG_OUT:
       return Object.assign({}, state, { user: action.payload });
     default:

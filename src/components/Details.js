@@ -41,7 +41,7 @@ class Details extends Component {
   favoriteHouse(id) {
     this.props.favoriteHouse(id);
     this.setState({
-      favorited: true
+      favorite: true
     });
   }
 

@@ -80,7 +80,7 @@ class HouseCardDashboard extends Component {
         <Link to={`/details/${house.id}`} className="test">
           <h1>{house.title}</h1>
           <h4>
-            <span>Desired Rent:</span> ${house.desired_rent.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</h4>
+            <span>Desired Rent:</span> ${house.desiredrent.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</h4>
         </Link>
       </div>
     );
