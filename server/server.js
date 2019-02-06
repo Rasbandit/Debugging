@@ -21,7 +21,7 @@ app.use(
 );
 
 massive(process.env.CONNECTION_STRING).then(db => {
-  app.set('dd', db);
+  app.set('db', db);
   app.listen(port, () => {
     console.log(`Ship docked at port: ${port}`);
   });
@@ -35,7 +35,7 @@ app.post('/api/create', main.addHouse);
 app.put('/update', main.updateHouse);
 
 app.get('/api/favoritesid', main.getFavoritesId);
-app.get('/api/propertes', main.getAllHouses);
+app.get('/api/properties', main.getAllHouses);
 app.get('/house/id', main.getHouse);
 app.get('/listed', main.getListed);
 

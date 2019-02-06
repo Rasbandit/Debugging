@@ -1,10 +1,10 @@
 module.exports = {
-  async register(req, res) {
+  register(req, res) {
     const { username, password } = req.body;
 
     req.app
       .get('db')
-      .duplicateuser([username])
+      .duplicateUser([username])
       .then(duplicateUser => {
         if (duplicateUser[0]) {
           res.status(401).send();
@@ -157,8 +157,7 @@ module.exports = {
     } else {
       res.status(200).send([]);
     }
-    res.send(200);
-  },
+},
 
   updateHouse(req, res) {
     const DB = req.app.get('db');

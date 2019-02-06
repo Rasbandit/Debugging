@@ -7,7 +7,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Program",
+      "name": "Launch Program To fix all the things",
       "program": "${workspaceFolder}\\server\\server.js"
     }
   ]
